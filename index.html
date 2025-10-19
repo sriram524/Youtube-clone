@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone - Static Demo</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR SECTION -->
+    <!-- Contains logo, search bar, and profile icon -->
+    <nav class="navbar">
+        <!-- Left section: YouTube logo -->
+        <div class="nav-left">
+            <div class="logo">
+                <span class="logo-icon">▶</span>
+                <span class="logo-text">YouTube</span>
+            </div>
+        </div>
+
+        <!-- Center section: Search bar -->
+        <div class="nav-center">
+            <input type="text" class="search-bar" placeholder="Search">
+            <button class="search-btn">🔍</button>
+        </div>
+
+        <!-- Right section: Profile icon -->
+        <div class="nav-right">
+            <div class="profile-icon">👤</div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT SECTION -->
+    <main class="container">
+        <h2 class="section-title">Recommended Videos</h2>
+
+        <!-- VIDEO GRID -->
+        <!-- Grid layout containing video cards -->
+        <div class="video-grid">
+            
+            <!-- VIDEO CARD 1 -->
+            <div class="video-card">
+                <!-- Video thumbnail image -->
+                <img src="https://via.placeholder.com/320x180/ff0000/ffffff?text=Video+1" alt="Video Thumbnail" class="thumbnail">
+                
+                <!-- Video details section -->
+                <div class="video-details">
+                    <h3 class="video-title">Learn HTML, CSS & JavaScript in 2025</h3>
+                    <p class="channel-name">Code Master</p>
+                    <p class="video-stats">1.2M views • 2 days ago</p>
+                    
+                    <!-- Like button with data-liked attribute for JS toggle -->
+                    <button class="like-btn" data-liked="false">👍 Like</button>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD 2 -->
+            <div class="video-card">
+                <img src="https://via.placeholder.com/320x180/c4302b/ffffff?text=Video+2" alt="Video Thumbnail" class="thumbnail">
+                <div class="video-details">
+                    <h3 class="video-title">Build a Complete Website from Scratch</h3>
+                    <p class="channel-name">Web Dev Pro</p>
+                    <p class="video-stats">850K views • 1 week ago</p>
+                    <button class="like-btn" data-liked="false">👍 Like</button>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD 3 -->
+            <div class="video-card">
+                <img src="https://via.placeholder.com/320x180/282828/ffffff?text=Video+3" alt="Video Thumbnail" class="thumbnail">
+                <div class="video-details">
+                    <h3 class="video-title">CSS Grid vs Flexbox - Complete Guide</h3>
+                    <p class="channel-name">Design Ninja</p>
+                    <p class="video-stats">500K views • 3 days ago</p>
+                    <button class="like-btn" data-liked="false">👍 Like</button>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD 4 -->
+            <div class="video-card">
+                <img src="https://via.placeholder.com/320x180/ff0000/ffffff?text=Video+4" alt="Video Thumbnail" class="thumbnail">
+                <div class="video-details">
+                    <h3 class="video-title">JavaScript Tips & Tricks for Beginners</h3>
+                    <p class="channel-name">JS Academy</p>
+                    <p class="video-stats">2.1M views • 5 days ago</p>
+                    <button class="like-btn" data-liked="false">👍 Like</button>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD 5 -->
+            <div class="video-card">
+                <img src="https://via.placeholder.com/320x180/c4302b/ffffff?text=Video+5" alt="Video Thumbnail" class="thumbnail">
+                <div class="video-details">
+                    <h3 class="video-title">Responsive Web Design Tutorial 2025</h3>
+                    <p class="channel-name">Tech Guru</p>
+                    <p class="video-stats">675K views • 1 day ago</p>
+                    <button class="like-btn" data-liked="false">👍 Like</button>
+                </div>
+            </div>
+
+            <!-- VIDEO CARD 6 -->
+            <div class="video-card">
+                <img src="https://via.placeholder.com/320x180/282828/ffffff?text=Video+6" alt="Video Thumbnail" class="thumbnail">
+                <div class="video-details">
+                    <h3 class="video-title">Git & GitHub Tutorial for Absolute Beginners</h3>
+                    <p class="channel-name">Dev Tools</p>
+                    <p class="video-stats">1.5M views • 1 week ago</p>
+                    <button class="like-btn" data-liked="false">👍 Like</button>
+                </div>
+            </div>
+
+        </div> <!-- End of video-grid -->
+    </main>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

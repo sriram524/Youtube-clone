@@ -1,0 +1,275 @@
+/* ==========================================
+   GLOBAL STYLES & RESET
+   ========================================== */
+
+/* Reset default margins and padding, set box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling with YouTube-like color scheme */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Light gray background */
+    color: #0f0f0f; /* Dark text */
+}
+
+/* ==========================================
+   NAVBAR STYLES
+   ========================================== */
+
+/* Navbar container - fixed at top, white background */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Sticks to top when scrolling */
+    top: 0;
+    z-index: 100;
+}
+
+/* Left section: Logo styling */
+.nav-left .logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* YouTube red color for logo icon */
+.logo-icon {
+    color: #ff0000;
+    font-size: 28px;
+}
+
+.logo-text {
+    color: #0f0f0f;
+}
+
+/* Center section: Search bar container */
+.nav-center {
+    display: flex;
+    flex: 0.6; /* Takes 60% of available space */
+    max-width: 600px;
+}
+
+/* Search input field */
+.search-bar {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 2px 0 0 2px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Search input focus effect */
+.search-bar:focus {
+    border-color: #065fd4; /* YouTube blue */
+}
+
+/* Search button */
+.search-btn {
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Search button hover effect */
+.search-btn:hover {
+    background-color: #e8e8e8;
+}
+
+/* Right section: Profile icon */
+.nav-right .profile-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 50%; /* Makes it circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* ==========================================
+   MAIN CONTENT STYLES
+   ========================================== */
+
+/* Main container for video content */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* Section title */
+.section-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #0f0f0f;
+}
+
+/* ==========================================
+   VIDEO GRID LAYOUT
+   ========================================== */
+
+/* Grid container using CSS Grid */
+.video-grid {
+    display: grid;
+    /* Responsive columns: minimum 280px, maximum 1fr (equal fraction) */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px; /* Space between grid items */
+}
+
+/* ==========================================
+   VIDEO CARD STYLES
+   ========================================== */
+
+/* Individual video card */
+.video-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures children don't overflow rounded corners */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: lift card and add shadow */
+.video-card:hover {
+    transform: translateY(-5px); /* Moves card up by 5px */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Video thumbnail image */
+.thumbnail {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Ensures image covers area without distortion */
+    display: block;
+}
+
+/* Video details section */
+.video-details {
+    padding: 12px;
+}
+
+/* Video title */
+.video-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #0f0f0f;
+    /* Limit to 2 lines and add ellipsis if overflow */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Channel name */
+.channel-name {
+    font-size: 12px;
+    color: #606060;
+    margin-bottom: 4px;
+}
+
+/* Video statistics (views and upload time) */
+.video-stats {
+    font-size: 12px;
+    color: #606060;
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   LIKE BUTTON STYLES
+   ========================================== */
+
+/* Like button default state */
+.like-btn {
+    padding: 8px 16px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 18px; /* Rounded pill shape */
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Like button hover effect */
+.like-btn:hover {
+    background-color: #e5e5e5;
+}
+
+/* Liked state - red background with white text */
+.like-btn.liked {
+    background-color: #ff0000;
+    color: white;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    /* Adjust navbar for smaller screens */
+    .navbar {
+        padding: 10px 16px;
+    }
+    
+    /* Stack search bar vertically on mobile if needed */
+    .nav-center {
+        flex: 1;
+    }
+    
+    /* Reduce search bar font size */
+    .search-bar {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    /* Adjust container padding */
+    .container {
+        padding: 16px;
+    }
+    
+    /* Smaller grid gap on mobile */
+    .video-grid {
+        gap: 16px;
+        /* Smaller minimum column width for mobile */
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    /* Single column layout on very small screens */
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Smaller logo text */
+    .logo-text {
+        font-size: 16px;
+    }
+    
+    /* Hide search button text, show only icon */
+    .search-btn {
+        padding: 10px 15px;
+    }
+}
